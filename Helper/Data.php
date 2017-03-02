@@ -25,11 +25,10 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
      */
     public function __construct(
         \Magento\Framework\App\Helper\Context $context,
-        CustomerSession $customerSession,
-        \Magento\Framework\App\Config\ScopeConfigInterface $scopeConfig
+        CustomerSession $customerSession
     ) {
         $this->_customerSession = $customerSession;
-        $this->scopeConfig = $scopeConfig;
+        $this->scopeConfig = $context->getScopeConfig();
         parent::__construct($context);
     }
     public function allowExtension() {
