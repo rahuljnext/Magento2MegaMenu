@@ -114,7 +114,7 @@ class Topmega extends Topmenu
         $this->categoryHelper = $categoryHelper;
         $this->extraClass = '';
         $this->menuType = 'default';
-        $this->currentStore = $this->storeManager->getStore();
+        $this->currentStore = $this->_storeManager->getStore();
         $this->mediaUrl = $this->currentStore->getBaseUrl(\Magento\Framework\UrlInterface::URL_TYPE_MEDIA);
         $this->categoryMediaUrl = $this->mediaUrl."catalog/category/";
         $this->parentId = false;
